@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+source $(pwd)/bin/helper.sh
+story_title="tox-T3"
+story_subtitle="cleanup installation"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="cleanup root"
+msgStart task "$story_title" "$task_title"
+
+rm -rf \
+    vendor \
+    private \
+    public \
+    .env \
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+
+source $(pwd)/bin/helper.sh
+story_title="tox-TYPO3"
+story_subtitle="DOCKER"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+bin/stop
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="build default"
+msgStart task "$story_title" "$task_title"
+
+mkdir -p docker/mysql-data
+docker-compose -f docker-compose.yml build
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+bin/start
+
+msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# stop container
+bin/stop
+
+# Delete all containers
+docker rm $(docker ps -a -q)

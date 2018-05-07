@@ -1,0 +1,20 @@
+\e[0m
+\e[1;37m  MMMMMMMM               MMMMMMMMIIIIIIIIIIBBBBBBBBBBBBBBBBB    \e[0m
+\e[1;37m  M:::::::M             M:::::::MI::::::::IB::::::::::::::::B   \e[0m
+\e[1;37m  M::::::::M           M::::::::MI::::::::IB::::::BBBBBB:::::B  \e[0m
+\e[1;37m  M:::::::::M         M:::::::::MII::::::IIBB:::::B     B:::::B \e[0m
+\e[1;37m  M::::::::::M       M::::::::::M  I::::I    B::::B     B:::::B \e[0m
+\e[1;37m  M:::::::::::M     M:::::::::::M  I::::I    B::::B     B:::::B \e[0m
+\e[1;37m  M:::::::M::::M   M::::M:::::::M  I::::I    B::::BBBBBB:::::B  \e[0m
+\e[1;37m  M::::::M M::::M M::::M M::::::M  I::::I    B:::::::::::::BB   \e[0m
+\e[1;37m  M::::::M  M::::M::::M  M::::::M  I::::I    B::::BBBBBB:::::B  \e[0m
+\e[1;37m  M::::::M   M:::::::M   M::::::M  I::::I    B::::B     B:::::B \e[0m
+\e[1;37m  M::::::M    M:::::M    M::::::M  I::::I    B::::B     B:::::B \e[0m
+\e[1;37m  M::::::M     MMMMM     M::::::M  I::::I    B::::B     B:::::B \e[0m
+\e[1;37m  M::::::M               M::::::MII::::::IIBB:::::BBBBBB::::::B \e[0m
+\e[1;37m  M::::::M               M::::::MI::::::::IB:::::::::::::::::B  \e[0m
+\e[1;37m  M::::::M               M::::::MI::::::::IB::::::::::::::::B   \e[0m
+\e[1;37m  MMMMMMMM               MMMMMMMMIIIIIIIIIIBBBBBBBBBBBBBBBBB    \e[0m
+\e[0m
+\e[0m  Powered by \e[33mtheLex · dasRick · byskr · Agent B -s\e[1;35m ... have fun ... \e[0m
+\e[0m

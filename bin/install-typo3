@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+source $(pwd)/bin/helper.sh
+story_title="tox-TYPO3"
+story_subtitle="TYPO3 installation"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="copy .env"
+msgStart task "$story_title" "$task_title"
+
+cp .env.dist .env
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="composer install"
+msgStart task "$story_title" "$task_title"
+
+docker-compose run composer install
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="create ENABLE_INSTALL_TOOL"
+msgStart task "$story_title" "$task_title"
+
+touch private/typo3conf/ENABLE_INSTALL_TOOL
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"

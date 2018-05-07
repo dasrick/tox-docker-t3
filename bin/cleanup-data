@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+source $(pwd)/bin/helper.sh
+story_title="tox-T3"
+story_subtitle="cleanup data"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="cleanup caches, logs and database"
+msgStart task "$story_title" "$task_title"
+
+# next line currently excluded because of speed ;-)
+# docker/composer \
+
+rm -rf \
+    docker/mysql-data \
+    var/cache/*.* \
+    var/log/*.* \
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------

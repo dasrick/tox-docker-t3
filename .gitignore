@@ -1,0 +1,8 @@
+/private
+/public
+/vendor
+
+/docker/composer
+/docker/mysql-data
+
+.env
