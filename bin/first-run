@@ -17,8 +17,8 @@ fi
 ########################################################################################################################
 # docker images
 #-----------------------------------------------------------------------------------------------------------------------
-#bin/build-docker
-# wait because of some timing issues with mysql container ...
+bin/build-docker
+# maybe ... wait because of some timing issues with mysql container ...
 
 ########################################################################################################################
 # get and extract fileadmin and uploads - get and import DB structure and structure
@@ -28,7 +28,7 @@ fi
 ########################################################################################################################
 # TYPO3 installation
 #-----------------------------------------------------------------------------------------------------------------------
-#bin/install-typo3
+bin/install-typo3
 
 msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"
 printf "$(cat bin/welcome.txt)"

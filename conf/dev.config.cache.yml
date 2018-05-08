@@ -1,10 +1,11 @@
 SYS:
     caching:
         cacheConfigurations:
-            cache_core:
-                backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
-            fluid_template:
-                backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
+            # Uncommenting the two lines below will slow down request times dramatically
+#            cache_core:
+#                backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
+#            fluid_template:
+#                backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
             cache_hash:
                 backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
             cache_pages:
@@ -22,7 +23,8 @@ SYS:
             l10n:
                 backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
             extbase_object:
-                backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
+#                backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
+                backend: 'TYPO3\CMS\Core\Cache\Backend\ApcuBackend'
             extbase_reflection:
                 backend: 'TYPO3\CMS\Core\Cache\Backend\NullBackend'
             extbase_datamapfactory_datamap:
