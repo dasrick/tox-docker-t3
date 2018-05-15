@@ -6,6 +6,11 @@
         { "type": "composer", "url": "https://composer.typo3.org/" }
     ],
     "require": {
+        "php": "7.2.*",
+        "ext-intl": "*",
+        "ext-gd": "*",
+        "ext-imagick": "*",
+
         "helhum/typo3-config-handling": "^0.6.1",
         "helhum/typo3-secure-web": "^0.2.7",
         "typo3-console/composer-auto-setup": "^0.3.5",
