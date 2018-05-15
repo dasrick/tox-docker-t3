@@ -33,6 +33,8 @@ mv ${LOCALE_PATH}/private/uploads ./private
 rm -r ./private/typo3temp/assets 2> /dev/null
 mv ${LOCALE_PATH}/private/typo3temp/assets ./private/typo3temp
 
+rm -r ${LOCALE_PATH}/private 2> /dev/null
+
 msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
 # END task -------------------------------------------------------------------------------------------------------------
 
