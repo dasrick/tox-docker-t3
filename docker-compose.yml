@@ -28,5 +28,6 @@ services:
       MYSQL_USER: root
     volumes:
       - ./docker/mysql-data:/var/lib/mysql
+      - ./docker/backup/database:/tmp
     ports:
       - "3306:3306"

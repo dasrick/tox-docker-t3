@@ -2,6 +2,7 @@
 /public
 /vendor
 
+/docker/backup
 /docker/composer
 /docker/mysql-data
 

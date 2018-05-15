@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+
+source $(pwd)/bin/helper.sh
+story_title="tox-TYPO3"
+story_subtitle="CONTENT-EXPORT files"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+
+########################################################################################################################
+# get and extract fileadmin
+#-----------------------------------------------------------------------------------------------------------------------
+LOCALE_PATH="./docker/backup/files"
+FILE="files.tar.gz"
+DST_FILE=${LOCALE_PATH}/${FILE}
+mkdir -p ${LOCALE_PATH}
+rm ${DST_FILE} 2> /dev/null
+#-----------------------------------------------------------------------------------------------------------------------
+
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="compression"
+msgStart task "$story_title" "$task_title"
+
+tar -czf ${DST_FILE} private/fileadmin private/uploads private/typo3temp/assets
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+
+msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"

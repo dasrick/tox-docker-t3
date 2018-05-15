@@ -18,12 +18,14 @@ fi
 # docker images
 #-----------------------------------------------------------------------------------------------------------------------
 bin/build-docker
+msgStart task "$story_title" "waiting 30 seconds ..."
+sleep 30
 # maybe ... wait because of some timing issues with mysql container ...
 
 ########################################################################################################################
 # get and extract fileadmin and uploads - get and import DB structure and structure
 #-----------------------------------------------------------------------------------------------------------------------
-#bin/import-content
+bin/import-content
 
 ########################################################################################################################
 # TYPO3 installation

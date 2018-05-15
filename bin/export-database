@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+source $(pwd)/bin/helper.sh
+story_title="tox-TYPO3"
+story_subtitle="CONTENT-EXPORT database"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+########################################################################################################################
+# the docker container have to run
+#-----------------------------------------------------------------------------------------------------------------------
+bin/restart
+msgStart task "$story_title" "waiting 30 seconds ..."
+sleep 30
+#=======================================================================================================================
+
+
+########################################################################################################################
+# get and extract DB content
+#-----------------------------------------------------------------------------------------------------------------------
+FILE=tox_typo3.sql
+LOCALE_PATH="./docker/backup/database"
+DOCKER_PATH="/tmp"
+mkdir -p ${LOCALE_PATH}
+rm ${LOCALE_PATH}/${FILE} 2> /dev/null
+#-----------------------------------------------------------------------------------------------------------------------
+
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="import"
+msgStart task "$story_title" "$task_title"
+
+docker-compose exec -T db sh -c 'mysqldump --skip-comments -uroot -p"$MYSQL_ROOT_PASSWORD" "$MYSQL_DATABASE" > '"${DOCKER_PATH}"'/'"${FILE}"
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+
+msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"
