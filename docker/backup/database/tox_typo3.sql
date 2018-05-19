@@ -150,7 +150,7 @@ CREATE TABLE `be_users` (
 
 LOCK TABLES `be_users` WRITE;
 /*!40000 ALTER TABLE `be_users` DISABLE KEYS */;
-INSERT INTO `be_users` VALUES (1,0,1526407005,'admin','',0,'$pbkdf2-sha256$25000$9DPdfqVMh/gcsFfh.58z1A$XkMw6XVC1QA7cFVm8I5yjCB6GJSfZx3m0pqZtaA9bR4',1,'',0,0,0,'','',NULL,0,1526407005,0,'',NULL,'',NULL,NULL,NULL,1,'',0,0,NULL,0,0,NULL,0,1,NULL);
+INSERT INTO `be_users` VALUES (1,0,1526407005,'admin','',0,'$pbkdf2-sha256$25000$9DPdfqVMh/gcsFfh.58z1A$XkMw6XVC1QA7cFVm8I5yjCB6GJSfZx3m0pqZtaA9bR4',1,'',0,0,0,'','',NULL,0,1526407005,0,'',NULL,'','a:15:{s:14:\"interfaceSetup\";s:7:\"backend\";s:10:\"moduleData\";a:6:{s:10:\"web_layout\";a:2:{s:8:\"function\";s:1:\"1\";s:8:\"language\";s:1:\"0\";}s:10:\"FormEngine\";a:2:{i:0;a:1:{s:32:\"c35634cd8ae4894e643ebb892e589515\";a:4:{i:0;s:4:\"root\";i:1;a:6:{s:4:\"edit\";a:1:{s:5:\"pages\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;s:9:\"workspace\";N;}i:2;s:75:\"&edit[pages][1]=edit&defVals=&overrideVals=&columnsOnly=&noView=&workspace=\";i:3;a:5:{s:5:\"table\";s:5:\"pages\";s:3:\"uid\";i:1;s:3:\"pid\";i:0;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}}i:1;s:32:\"bc34360f0af0e8074665f8517dd5c13b\";}s:57:\"TYPO3\\CMS\\Backend\\Utility\\BackendUtility::getUpdateSignal\";a:0:{}s:6:\"web_ts\";a:2:{s:8:\"function\";s:85:\"TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateInformationModuleFunctionController\";s:19:\"constant_editor_cat\";s:0:\"\";}s:16:\"opendocs::recent\";a:1:{s:32:\"bc34360f0af0e8074665f8517dd5c13b\";a:4:{i:0;s:8:\"NEW SITE\";i:1;a:6:{s:4:\"edit\";a:1:{s:12:\"sys_template\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";s:5:\"title\";s:6:\"noView\";N;s:9:\"workspace\";N;}i:2;s:87:\"&edit[sys_template][1]=edit&defVals=&overrideVals=&columnsOnly=title&noView=&workspace=\";i:3;a:5:{s:5:\"table\";s:12:\"sys_template\";s:3:\"uid\";i:1;s:3:\"pid\";i:1;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}}s:12:\"system_dbint\";a:3:{s:8:\"function\";s:8:\"refindex\";s:6:\"search\";s:3:\"raw\";s:22:\"search_query_makeQuery\";s:3:\"all\";}}s:19:\"thumbnailsByDefault\";i:1;s:14:\"emailMeAtLogin\";i:0;s:11:\"startModule\";s:22:\"help_AboutAboutmodules\";s:8:\"titleLen\";i:50;s:8:\"edit_RTE\";s:1:\"1\";s:20:\"edit_docModuleUpload\";s:1:\"1\";s:15:\"resizeTextareas\";i:1;s:25:\"resizeTextareas_MaxHeight\";i:500;s:24:\"resizeTextareas_Flexible\";i:0;s:4:\"lang\";s:0:\"\";s:19:\"firstLoginTimeStamp\";i:1526717180;s:15:\"moduleSessionID\";a:6:{s:10:\"web_layout\";s:32:\"e0e2749a48e2046bc35b730f2ef2d081\";s:10:\"FormEngine\";s:32:\"e0e2749a48e2046bc35b730f2ef2d081\";s:57:\"TYPO3\\CMS\\Backend\\Utility\\BackendUtility::getUpdateSignal\";s:32:\"e0e2749a48e2046bc35b730f2ef2d081\";s:6:\"web_ts\";s:32:\"e0e2749a48e2046bc35b730f2ef2d081\";s:16:\"opendocs::recent\";s:32:\"e0e2749a48e2046bc35b730f2ef2d081\";s:12:\"system_dbint\";s:32:\"e0e2749a48e2046bc35b730f2ef2d081\";}s:17:\"BackendComponents\";a:1:{s:6:\"States\";a:1:{s:8:\"Pagetree\";a:1:{s:9:\"stateHash\";a:4:{i:0;s:1:\"1\";i:1;s:1:\"1\";s:4:\"root\";s:1:\"1\";s:16:\"lastSelectedNode\";s:2:\"p1\";}}}}}',NULL,NULL,1,'',0,0,NULL,1526717180,0,NULL,0,1,NULL);
 /*!40000 ALTER TABLE `be_users` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `cache_md5params`;
@@ -357,11 +357,12 @@ CREATE TABLE `pages` (
   KEY `parent` (`pid`,`deleted`,`sorting`),
   KEY `alias` (`alias`),
   KEY `determineSiteRoot` (`is_siteroot`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `pages` WRITE;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
+INSERT INTO `pages` VALUES (1,0,0,0,0,'',0,0,0,0,0,0,1526717617,256,0,1,0,31,27,0,0,1526717568,1,0,'root',1,NULL,1,0,'',0,0,1,0,0,0,'','',0,'',0,0,NULL,0,'',0,NULL,0,1526717617,NULL,'',0,'','','',0,0,0,0,'',0,0,'','',NULL,0,0);
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `pages_language_overlay`;
@@ -862,11 +863,12 @@ CREATE TABLE `sys_history` (
   KEY `recordident_1` (`tablename`,`recuid`),
   KEY `recordident_2` (`tablename`,`tstamp`),
   KEY `sys_log_uid` (`sys_log_uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `sys_history` WRITE;
 /*!40000 ALTER TABLE `sys_history` DISABLE KEYS */;
+INSERT INTO `sys_history` VALUES (1,0,3,'a:2:{s:9:\"oldRecord\";a:1:{s:5:\"title\";s:15:\"[Default Title]\";}s:9:\"newRecord\";a:1:{s:5:\"title\";s:4:\"root\";}}','title',1,'pages',1526717582,NULL,0),(2,0,4,'a:2:{s:9:\"oldRecord\";a:3:{s:11:\"is_siteroot\";i:0;s:6:\"hidden\";i:1;s:8:\"fe_group\";s:1:\"0\";}s:9:\"newRecord\";a:3:{s:11:\"is_siteroot\";s:1:\"1\";s:6:\"hidden\";s:1:\"0\";s:8:\"fe_group\";s:0:\"\";}}','is_siteroot,hidden,fe_group',1,'pages',1526717617,NULL,0),(3,0,7,'a:2:{s:9:\"oldRecord\";a:1:{s:5:\"title\";s:8:\"NEW SITE\";}s:9:\"newRecord\";a:1:{s:5:\"title\";s:24:\"Title from Root-Template\";}}','title',1,'sys_template',1526717646,NULL,0);
 /*!40000 ALTER TABLE `sys_history` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `sys_language`;
@@ -946,11 +948,12 @@ CREATE TABLE `sys_log` (
   KEY `user_auth` (`type`,`action`,`tstamp`),
   KEY `request` (`request_id`),
   KEY `combined_1` (`tstamp`,`type`,`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `sys_log` WRITE;
 /*!40000 ALTER TABLE `sys_log` DISABLE KEYS */;
+INSERT INTO `sys_log` VALUES (1,0,1,1,0,'',0,0,'User %s logged in from %s (%s)',1526717180,255,1,'','a:3:{i:0;s:5:\"admin\";i:1;s:0:\"\";i:2;s:0:\"\";}',-1,-99,'','',0,'',0,NULL,NULL),(2,0,1,1,1,'pages',0,0,'Record \'%s\' (%s) was inserted on page \'%s\' (%s)',1526717568,1,10,'','a:4:{i:0;s:15:\"[Default Title]\";i:1;s:7:\"pages:1\";i:2;s:12:\"[root-level]\";i:3;i:0;}',0,0,'NEW12345','',0,'',0,NULL,NULL),(3,0,1,2,1,'pages',0,0,'Record \'%s\' (%s) was updated. (Online).',1526717582,1,10,'','a:2:{i:0;s:4:\"root\";i:1;s:7:\"pages:1\";}',1,0,'','',0,'',0,NULL,NULL),(4,0,1,2,1,'pages',0,0,'Record \'%s\' (%s) was updated. (Online).',1526717617,1,10,'','a:2:{i:0;s:4:\"root\";i:1;s:7:\"pages:1\";}',1,0,'','',0,'',0,NULL,NULL),(5,0,1,1,1,'sys_template',0,0,'Record \'%s\' (%s) was inserted on page \'%s\' (%s)',1526717622,1,10,'','a:4:{i:0;s:8:\"NEW SITE\";i:1;s:14:\"sys_template:1\";i:2;s:4:\"root\";i:3;i:1;}',1,0,'NEW','',0,'',0,NULL,NULL),(6,0,1,1,0,'',0,0,'User %s has cleared the cache (cacheCmd=%s)',1526717622,3,0,'','a:2:{i:0;s:5:\"admin\";i:1;s:3:\"all\";}',-1,0,'','',0,'',0,NULL,NULL),(7,0,1,2,1,'sys_template',0,0,'Record \'%s\' (%s) was updated. (Online).',1526717646,1,10,'','a:2:{i:0;s:24:\"Title from Root-Template\";i:1;s:14:\"sys_template:1\";}',1,0,'','',0,'',0,NULL,NULL),(8,0,1,2,0,'',0,0,'User %s logged out from TYPO3 Backend',1526717687,255,1,'','a:1:{i:0;s:5:\"admin\";}',-1,0,'','',0,'',0,NULL,NULL);
 /*!40000 ALTER TABLE `sys_log` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `sys_news`;
@@ -1015,12 +1018,12 @@ CREATE TABLE `sys_registry` (
   `entry_value` mediumblob,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `entry_identifier` (`entry_namespace`,`entry_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `sys_registry` WRITE;
 /*!40000 ALTER TABLE `sys_registry` DISABLE KEYS */;
-INSERT INTO `sys_registry` VALUES (1,'installUpdate','TYPO3\\CMS\\Install\\Updates\\DatabaseCharsetUpdate','i:1;'),(2,'installUpdate','TYPO3\\CMS\\Install\\Updates\\MigrateMediaToAssetsForTextMediaCe','i:1;'),(3,'installUpdate','TYPO3\\CMS\\Install\\Updates\\Compatibility6ExtractionUpdate','i:1;'),(5,'installUpdateRows','rowUpdatersDone','a:3:{i:0;s:52:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\L10nModeUpdater\";i:1;s:53:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\ImageCropUpdater\";i:2;s:57:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\RteLinkSyntaxUpdater\";}'),(6,'installUpdate','TYPO3\\CMS\\Install\\Updates\\Compatibility7ExtractionUpdate','i:1;'),(7,'installUpdate','TYPO3\\CMS\\Install\\Updates\\RteHtmlAreaExtractionUpdate','i:1;');
+INSERT INTO `sys_registry` VALUES (1,'installUpdate','TYPO3\\CMS\\Install\\Updates\\DatabaseCharsetUpdate','i:1;'),(2,'installUpdate','TYPO3\\CMS\\Install\\Updates\\MigrateMediaToAssetsForTextMediaCe','i:1;'),(3,'installUpdate','TYPO3\\CMS\\Install\\Updates\\Compatibility6ExtractionUpdate','i:1;'),(5,'installUpdateRows','rowUpdatersDone','a:3:{i:0;s:52:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\L10nModeUpdater\";i:1;s:53:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\ImageCropUpdater\";i:2;s:57:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\RteLinkSyntaxUpdater\";}'),(6,'installUpdate','TYPO3\\CMS\\Install\\Updates\\Compatibility7ExtractionUpdate','i:1;'),(7,'installUpdate','TYPO3\\CMS\\Install\\Updates\\RteHtmlAreaExtractionUpdate','i:1;'),(9,'core','sys_refindex_lastUpdate','i:1526717673;');
 /*!40000 ALTER TABLE `sys_registry` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `sys_template`;
@@ -1064,11 +1067,12 @@ CREATE TABLE `sys_template` (
   KEY `t3ver_oid` (`t3ver_oid`,`t3ver_wsid`),
   KEY `parent` (`pid`,`deleted`,`hidden`,`sorting`),
   KEY `roottemplate` (`deleted`,`hidden`,`root`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `sys_template` WRITE;
 /*!40000 ALTER TABLE `sys_template` DISABLE KEYS */;
+INSERT INTO `sys_template` VALUES (1,1,0,0,0,'',0,0,0,0,0,0,1526717646,256,1526717622,1,'Title from Root-Template','',0,0,0,1,3,NULL,NULL,'\n# Default PAGE object:\npage = PAGE\npage.10 = TEXT\npage.10.value = HELLO WORLD!\n','',NULL,'',0,0,0,0);
 /*!40000 ALTER TABLE `sys_template` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `tt_content`;
