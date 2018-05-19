@@ -1,0 +1,8 @@
+EXT:
+    extConf:
+        backend:
+#            backendFavicon: 'EXT:dasrick_site_package/Resources/Public/Images/favicon-96x96.png'
+#            backendLogo: 'EXT:dasrick_site_package/Resources/Public/Images/t3console-backend-logo.svg'
+            loginBackgroundImage: 'EXT:dasrick_site_package/Resources/Public/Images/background.jpg'
+            loginHighlightColor: '#525252'
+#            loginLogo: 'EXT:dasrick_site_package/Resources/Public/Images/login.png'

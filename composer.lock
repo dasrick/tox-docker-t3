@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "284fa0e39c038f88c117f3872379fafa",
+    "content-hash": "96031c514b82eda309052e8201b71f3a",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -56,6 +56,33 @@
                 "text"
             ],
             "time": "2014-05-19T10:25:02+00:00"
+        },
+        {
+            "name": "dasrick/site-package",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/dasrick_site_package",
+                "reference": "93f0cc26c6f410c8ecea5ed5e1a028c3235ea726",
+                "shasum": null
+            },
+            "require": {
+                "php": ">=7.0 <7.3",
+                "typo3/cms-core": "^8.7"
+            },
+            "replace": {
+                "dasrick_site_package": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Dasrick\\SitePackage\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "An example site package for dasrick TYPO3 Distribution"
         },
         {
             "name": "doctrine/annotations",
@@ -811,33 +838,6 @@
             "time": "2018-02-27T16:55:14+00:00"
         },
         {
-            "name": "helhum/site-package",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "packages/helhum_site_package",
-                "reference": "48cbd30ea843d7e2bd1e57331f4c13c871d7e73a",
-                "shasum": null
-            },
-            "require": {
-                "php": ">=7.0 <7.3",
-                "typo3/cms-core": "^8.7"
-            },
-            "replace": {
-                "helhum_site_package": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "Helhum\\SitePackage\\": "Classes/"
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "An example site package for Helhum TYPO3 Distribution"
-        },
-        {
             "name": "helhum/typo3-composer-setup",
             "version": "v0.5.2",
             "source": {
@@ -1090,7 +1090,7 @@
         },
         {
             "name": "helhum/typo3-error-handling",
-            "version": "dev-playground-docker-images",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "packages/typo3-error-handling",
@@ -5251,7 +5251,7 @@
     "stability-flags": {
         "roave/security-advisories": 20,
         "helhum/typo3-error-handling": 20,
-        "helhum/site-package": 20
+        "dasrick/site-package": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

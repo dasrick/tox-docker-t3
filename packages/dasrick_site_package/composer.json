@@ -1,7 +1,7 @@
 {
-    "name": "helhum/site-package",
+    "name": "dasrick/site-package",
     "type": "typo3-cms-extension",
-    "description" : "An example site package for Helhum TYPO3 Distribution",
+    "description" : "An example site package for dasrick TYPO3 Distribution",
     "license": "GPL-2.0-or-later",
     "require": {
         "php": ">=7.0 <7.3",
@@ -9,10 +9,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Helhum\\SitePackage\\": "Classes/"
+            "Dasrick\\SitePackage\\": "Classes/"
         }
     },
     "replace": {
-        "helhum_site_package": "self.version"
+        "dasrick_site_package": "self.version"
     }
 }

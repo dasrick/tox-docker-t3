@@ -32,7 +32,7 @@
         "typo3/cms-viewpage": "^8.7.9",
 
         "helhum/typo3-error-handling": "@dev",
-        "helhum/site-package": "@dev"
+        "dasrick/site-package": "@dev"
     },
     "require-dev": {
         "helhum/dotenv-connector": "^2.0",
