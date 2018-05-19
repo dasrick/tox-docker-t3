@@ -4,5 +4,5 @@ ARG BUILD_ENV=local
 ENV WHITELIST_FUNCTIONS proc_open
 ENV DOCUMENT_ROOT=/app/public
 
-RUN /bin/bash /app/build-scripts/docker/custom.sh $BUILD_ENV
+RUN /bin/bash /app/docker/build-scripts/custom.sh $BUILD_ENV
 RUN rm -rf /app/build-scripts

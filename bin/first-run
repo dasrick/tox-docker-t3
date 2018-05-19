@@ -10,7 +10,7 @@ msgStart story "$story_title" "$story_subtitle"
 # set user id for ***
 #-----------------------------------------------------------------------------------------------------------------------
 if [ -z ${LOCAL_USER_ID+x} ]; then
-    printf "\e[1;41m please run bin/set-user-id first \e[0m \n"
+    printf "\e[1;41m please run bin/set-user-id first and reopen your terminal \e[0m \n"
     exit 1;
 fi
 
