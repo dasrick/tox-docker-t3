@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+
+source $(pwd)/bin/helper.sh
+story_title="tox-TYPO3"
+story_subtitle="CONTENT-IMPORT files"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+
+########################################################################################################################
+# get and extract fileadmin
+#-----------------------------------------------------------------------------------------------------------------------
+LOCALE_PATH="./docker/backup/files"
+FILE="files.tar.gz"
+DST_FILE=${LOCALE_PATH}/${FILE}
+#-----------------------------------------------------------------------------------------------------------------------
+
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="extraction"
+msgStart task "$story_title" "$task_title"
+
+tar -xzf ${DST_FILE} --directory=${LOCALE_PATH}
+
+rm -r ./private/fileadmin 2> /dev/null
+mv ${LOCALE_PATH}/private/fileadmin ./private
+
+rm -r ./private/uploads 2> /dev/null
+mv ${LOCALE_PATH}/private/uploads ./private
+
+rm -r ./private/typo3temp/assets 2> /dev/null
+mv ${LOCALE_PATH}/private/typo3temp/assets ./private/typo3temp
+
+rm -r ${LOCALE_PATH}/private 2> /dev/null
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+
+msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"

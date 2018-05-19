@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source $(pwd)/bin/helper.sh
-story_title="tox-T3"
+story_title="tox-TYPO3"
 story_subtitle="cleanup installation"
 S_TIME=$SECONDS
 msgStart story "$story_title" "$story_subtitle"

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+source $(pwd)/bin/helper.sh
+story_title="tox-TYPO3"
+story_subtitle="PREPARATION"
+S_TIME=$SECONDS
+msgStart story "$story_title" "$story_subtitle"
+
+# START task -----------------------------------------------------------------------------------------------------------
+START_TIME=$SECONDS
+task_title="set local user id"
+msgStart task "$story_title" "$task_title"
+
+if  grep -q "export LOCAL_USER_ID=" ~/.zshrc; then
+    true
+else
+    echo 'export LOCAL_USER_ID=$(id -u)' >> ~/.zshrc
+fi
+
+if grep -q "export LOCAL_USER_ID=" ~/.profile; then
+    true
+else
+    echo 'export LOCAL_USER_ID=$(id -u)' >> ~/.profile
+fi
+
+if [[ $(uname -s) == "Darwin" ]]; then
+    if grep -q "export LOCAL_USER_ID=" ~/.bash_profile; then
+        true
+    else
+        echo 'export LOCAL_USER_ID=$(id -u)' >> ~/.bash_profile
+    fi
+fi
+export LOCAL_USER_ID=$(id -u)
+
+msgDone task "$story_title" "$task_title" $(($SECONDS - $START_TIME))
+# END task -------------------------------------------------------------------------------------------------------------
+
+msgDone story "$story_title" "$story_subtitle" "$(($SECONDS - $S_TIME))"

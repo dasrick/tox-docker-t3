@@ -14,9 +14,8 @@ DB:
 FE:
     loginSecurityLevel: normal
 GFX:
-    jpg_quality: '80'
-    processor: GraphicsMagick
-    processor_effects: -1
+    processor: ImageMagick
+    processor_effects: 1
 LOG:
     writerConfiguration:
         '%const(TYPO3\CMS\Core\Log\LogLevel::WARNING)%':
