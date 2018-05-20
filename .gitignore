@@ -6,3 +6,6 @@
 /docker/mysql-data
 
 .env
+
+# in packages
+node_modules
