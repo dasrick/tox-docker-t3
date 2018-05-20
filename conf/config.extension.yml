@@ -9,6 +9,27 @@ EXT:
         extensionmanager:
             automaticInstallation: '1'
             offlineMode: '0'
+        fluidpages:
+            autoload: '1'
+            doktypes: ''
+            pagesLanguageConfigurationOverlay: '0'
+        flux:
+            compact: '0'
+            debugMode: '0'
+            handleErrors: '0'
+            listNestedContent: '0'
+        metaseo:
+            enableBeta: '0'
+            enableIntegrationTTNews: '0'
+            pagingSize: ''
+            sitemap_clearCachePossibility: ''
+        realurl:
+            autoConfFormat: '0'
+#            configFile: typo3conf/ext/dasrick_site_package/Resources/Private/realurl_conf.php
+            enableAutoConf: '0'
+            enableDevLog: '0'
+            moduleIcon: '0'
+            segTitleFieldList: ''
         rsaauth:
             temporaryDirectory: ''
         saltedpasswords:
@@ -28,3 +49,17 @@ EXT:
             maxLifetime: '1440'
             showSampleTasks: '1'
             useAtdaemon: '0'
+        staticfilecache:
+            backendDisplayMode: current
+            boostMode: '0'
+            clearCacheForAllDomains: '1'
+            enableStaticFileCompression: '1'
+            fileTypes: 'xml,rss'
+            recreateURI: '0'
+            sendCacheControlHeader: '0'
+            sendCacheControlHeaderRedirectAfterCacheTimeout: '0'
+            sendTypo3Headers: '0'
+            showGenerationSignature: '1'
+            strftime: '%d-%m-%y %H:%M'
+        vhs:
+            disableAssetHandling: '0'
