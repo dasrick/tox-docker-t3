@@ -48,6 +48,13 @@
         "typo3/testing-framework": "^1.2.2 || ^2.0.1",
         "typo3-console/php-server-command": "^0.2"
     },
+    "scripts": {
+        "post-install-cmd": [
+            "echo run-install-deploy",
+            "rm -rf public/typo3temp",
+            "ln -sf ../private/typo3temp public/typo3temp"
+        ]
+    },
     "extra": {
         "helhum/typo3-config-handling": {
             "ext-config": "conf/config.extension.yml"
