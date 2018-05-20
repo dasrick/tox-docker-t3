@@ -36,6 +36,7 @@
         "fluidtypo3/flux": "^8.2.1",
         "fluidtypo3/vhs": "^4.4.0",
         "dmitryd/typo3-realurl": "^2.3.2",
+        "lochmueller/sourceopt": "^1.0.0",
         "lochmueller/staticfilecache": "^5.3.4",
         "webdevops/metaseo": "^3.0.0",
 

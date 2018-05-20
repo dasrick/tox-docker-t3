@@ -1,7 +1,33 @@
-plugin.tx_ftidistribution {
+plugin.tx_dasricksitepackage {
   view {
     templateRootPath = EXT:dasrick_site_package/Resources/Private/Templates/
     partialRootPath = EXT:dasrick_site_package/Resources/Private/Partials/
     layoutRootPath = EXT:dasrick_site_package/Resources/Private/Layouts/
   }
+}
+
+# metaseo
+plugin.metaseo {
+  metaTags {
+    enableDC = 0
+    opengraph = 0
+    revisit = 0
+    useExpire = 0
+    useLastUpdate = 0
+  }
+
+  pageTitle {
+    applySitetitleToPagetitle = 0
+    applySitetitleToPrefixSuffix = 0
+  }
+}
+
+# sourceopt
+sourceopt {
+  enabled = 1
+  formatHtml = 3
+  headerComment =
+  removeBlurScript = 1
+  removeComments = 1
+  removeGenerator = 1
 }
