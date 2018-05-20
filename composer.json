@@ -6,7 +6,7 @@
         { "type": "composer", "url": "https://composer.typo3.org/" }
     ],
     "require": {
-        "php": "7.2.*",
+        "php": "7.1.*",
         "ext-intl": "*",
         "ext-gd": "*",
         "ext-imagick": "*",
@@ -17,19 +17,27 @@
 
         "roave/security-advisories": "dev-master",
 
-        "typo3/cms-belog": "^8.7.9",
-        "typo3/cms-beuser": "^8.7.9",
-        "typo3/cms-context-help": "^8.7.9",
-        "typo3/cms-fluid-styled-content": "^8.7.9",
-        "typo3/cms-impexp": "^8.7.9",
-        "typo3/cms-info": "^8.7.9",
-        "typo3/cms-info-pagetsconfig": "^8.7.9",
-        "typo3/cms-lowlevel": "^8.7.9",
-        "typo3/cms-reports": "^8.7.9",
-        "typo3/cms-rte-ckeditor": "^8.7.9",
-        "typo3/cms-setup": "^8.7.9",
-        "typo3/cms-tstemplate": "^8.7.9",
-        "typo3/cms-viewpage": "^8.7.9",
+        "typo3/cms-belog": "^8.7.13",
+        "typo3/cms-beuser": "^8.7.13",
+        "typo3/cms-context-help": "^8.7.13",
+        "typo3/cms-fluid-styled-content": "^8.7.13",
+        "typo3/cms-impexp": "^8.7.13",
+        "typo3/cms-info": "^8.7.13",
+        "typo3/cms-info-pagetsconfig": "^8.7.13",
+        "typo3/cms-lowlevel": "^8.7.13",
+        "typo3/cms-reports": "^8.7.13",
+        "typo3/cms-rte-ckeditor": "^8.7.13",
+        "typo3/cms-setup": "^8.7.13",
+        "typo3/cms-tstemplate": "^8.7.13",
+        "typo3/cms-viewpage": "^8.7.13",
+
+        "fluidtypo3/fluidcontent": "^5.2.0",
+        "fluidtypo3/fluidpages": "^4.1.0",
+        "fluidtypo3/flux": "^8.2.1",
+        "fluidtypo3/vhs": "^4.4.0",
+        "dmitryd/typo3-realurl": "^2.3.2",
+        "lochmueller/staticfilecache": "^5.3.4",
+        "webdevops/metaseo": "^3.0.0",
 
         "helhum/typo3-error-handling": "@dev",
         "dasrick/site-package": "@dev"
@@ -44,6 +52,7 @@
             "ext-config": "conf/config.extension.yml"
         },
         "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "root-dir": "private",
             "web-dir": "public"
         }

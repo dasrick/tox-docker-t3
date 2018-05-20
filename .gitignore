@@ -4,7 +4,7 @@
 
 /docker/composer
 /docker/mysql-data
-
+/typo3_src/
 .env
 
 # in packages
