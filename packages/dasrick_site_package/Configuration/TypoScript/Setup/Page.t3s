@@ -1,0 +1,20 @@
+# Default PAGE object:
+page = PAGE
+page.10 = TEXT
+page.10.value = HELLO WORLD! ...
+
+page {
+  includeCSSLibs {
+#    main = EXT:dasrick_site_package/Resources/Public/css/main.css
+  }
+  includeCSS {
+  }
+  includeJSLibs {
+  }
+  includeJS {
+  }
+  includeJSFooterlibs {
+  }
+  includeJSFooter {
+  }
+}

@@ -1,0 +1,3 @@
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Constants/Module.t3s">
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Constants/Plugin.t3s">
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Constants/Condition.t3s">

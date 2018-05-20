@@ -1,0 +1,7 @@
+plugin.tx_ftidistribution {
+  view {
+    templateRootPath = EXT:dasrick_site_package/Resources/Private/Templates/
+    partialRootPath = EXT:dasrick_site_package/Resources/Private/Partials/
+    layoutRootPath = EXT:dasrick_site_package/Resources/Private/Layouts/
+  }
+}

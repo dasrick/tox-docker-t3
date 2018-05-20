@@ -1,0 +1,13 @@
+# protocol
+#protocol = http
+#[globalString = IENV:TYPO3_SSL=1]
+#  protocol = https
+#[global]
+
+# host - default
+#host = www.foo.com
+# host - condition
+#[globalString = IENV:HTTP_HOST=www.bar.com]
+#  host = www.bar.com
+#[global]
+

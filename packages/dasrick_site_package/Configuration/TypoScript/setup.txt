@@ -1,0 +1,4 @@
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Setup/Module.t3s">
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Setup/Plugin.t3s">
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Setup/Page.t3s">
+<INCLUDE_TYPOSCRIPT:source="FILE: EXT:dasrick_site_package/Configuration/TypoScript/Setup/Config.t3s">
