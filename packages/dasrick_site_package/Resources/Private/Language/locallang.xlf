@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en"
+          datatype="plaintext"
+          original="messages"
+          product-name="fti_distribution"
+          date="2016-12-19T16:26:43+01:00">
+        <header/>
+        <body>
+            <!-- PAGES -->
+            <trans-unit id="flux.page_mainentry">
+                <source>Main</source>
+            </trans-unit>
+            <trans-unit id="flux.page_mainentry.description">
+                <source>Yes ... the entry page</source>
+            </trans-unit>
+            <trans-unit id="flux.page_subentry_dark">
+                <source>SubEntry dark</source>
+            </trans-unit>
+            <trans-unit id="flux.page_subentry_dark.description">
+                <source>sub page with dark theme</source>
+            </trans-unit>
+            <trans-unit id="flux.page_subentry_light">
+                <source>SubEntry light</source>
+            </trans-unit>
+            <trans-unit id="flux.page_subentry_light.description">
+                <source>sub page with light theme</source>
+            </trans-unit>
+            <trans-unit id="flux.page_subentry_primary">
+                <source>SubEntry primary</source>
+            </trans-unit>
+            <trans-unit id="flux.page_subentry_primary.description">
+                <source>sub page with primary theme</source>
+            </trans-unit>
+            <!-- PAGES -->
+        </body>
+    </file>
+</xliff>
