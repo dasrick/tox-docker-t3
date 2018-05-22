@@ -14,7 +14,29 @@ page {
   includeJS {
   }
   includeJSFooterlibs {
+    jquery = /typo3conf/ext/dasrick_site_package/Resources/Public/Libs/dasrick-bootstrap/js/jquery.slim.min.js
+    popper = /typo3conf/ext/dasrick_site_package/Resources/Public/Libs/dasrick-bootstrap/js/popper.min.js
+    dasrickBootstrap = /typo3conf/ext/dasrick_site_package/Resources/Public/Libs/dasrick-bootstrap/js/bootstrap.min.js
   }
   includeJSFooter {
   }
+
+  headerData {
+    #100 = TEXT
+    #100.value = <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    110 = TEXT
+    110.value = <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    120 = TEXT
+    120.value = <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  }
+
+  meta {
+#    X-UA-Compatible = IE=edge
+#    viewport = width=device-width, initial-scale=1
+#    google-site-verification = {$google.siteVerificationCode}
+  }
+
+  10010 = TEXT
+  10010.value = <link rel="stylesheet" href="/typo3conf/ext/dasrick_site_package/Resources/Public/Libs/dasrick-bootstrap/css/bootstrap.min.css" media="all">
+
 }
