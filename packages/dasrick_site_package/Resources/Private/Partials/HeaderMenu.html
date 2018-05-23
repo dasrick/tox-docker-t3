@@ -1,0 +1,35 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:section name="HeaderMenu">
+        <v:variable.set name="persistence"
+                        value="{v:variable.typoscript(path: 'plugin.tx_dasricksitepackage.persistence')}"/>
+
+        <!--<v:menu pageUid="{persistence.headerMenuPid}"-->
+        <v:menu pageUid="1"
+                useShortcutData="true"
+                levels="1">
+
+            <f:if condition="{menu}">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <f:for each="{menu}" as="item">
+                            <f:if
+                                condition="{item._PAGES_OVERLAY_LANGUAGE}=={v:page.language()}">
+                                <li class="nav-item {f:if(condition: '{item.current}', then: 'active')}">
+                                    <f:link.page pageUid="{item.uid}"
+                                                 title="{item.linktext}"
+                                                 class="nav-link">{item.linktext}
+                                    </f:link.page>
+                                </li>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </div>
+            </f:if>
+        </v:menu>
+
+    </f:section>
+
+</div>
