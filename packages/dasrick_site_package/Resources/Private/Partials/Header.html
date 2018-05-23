@@ -3,11 +3,37 @@
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
     <f:section name="Header">
+        <v:variable.set name="theme" value="{settings.theme}"/>
 
-        <header>
-            header
+        <header class="header-{theme}">
+            <nav class="navbar navbar-expand-md">
+                <div class="container">
+                    <f:render partial="HeaderBrand" arguments="{_all}"/>
+                    <button class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarCollapse"
+                            aria-controls="navbarCollapse"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Private</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Business</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Music</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
-
     </f:section>
 
 </div>

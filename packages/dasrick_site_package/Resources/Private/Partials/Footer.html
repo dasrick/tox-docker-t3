@@ -3,9 +3,17 @@
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
     <f:section name="Footer">
+        <!--<v:variable.set name="theme" value="{settings.theme}"/>-->
 
-        <footer>
-            footer
+        <!--<v:variable.set name="class-text" value="{f:if(condition: settings.theme=='dark', then: 'text-secondary')}"/>-->
+        <!--<v:variable.set name="class-text" value="{f:if(condition: settings.theme=='light', then: 'text-dark')}"/>-->
+        <!--<v:variable.set name="class-text" value="{f:if(condition: settings.theme=='primary', then: 'text-light')}"/>-->
+
+        <!--<footer class="py-4 {class-text} bg-{theme}">-->
+        <footer class="py-4 text-secondary bg-dark">
+            <div class="container">
+                footer
+            </div>
         </footer>
 
     </f:section>

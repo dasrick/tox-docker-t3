@@ -6,6 +6,9 @@ page = PAGE
 page {
   includeCSSLibs {
 #    main = EXT:dasrick_site_package/Resources/Public/css/main.css
+    openSans = EXT:dasrick_site_package/Resources/Public/Libs/npm-font-open-sans/open-sans.css
+    openSansCondensed = EXT:dasrick_site_package/Resources/Public/Libs/npm-font-open-sans-condensed/open-sans-condensed.css
+    fontAwesome = EXT:dasrick_site_package/Resources/Public/Libs/font-awesome/css/font-awesome.min.css
   }
   includeCSS {
   }
@@ -24,10 +27,10 @@ page {
   headerData {
     #100 = TEXT
     #100.value = <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    110 = TEXT
-    110.value = <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
-    120 = TEXT
-    120.value = <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    #110 = TEXT
+    #110.value = <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    #120 = TEXT
+    #120.value = <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
   }
 
   meta {
@@ -38,5 +41,7 @@ page {
 
   10010 = TEXT
   10010.value = <link rel="stylesheet" href="/typo3conf/ext/dasrick_site_package/Resources/Public/Libs/dasrick-bootstrap/css/bootstrap.min.css" media="all">
+  10020 = TEXT
+  10020.value = <link rel="stylesheet" href="/typo3conf/ext/dasrick_site_package/Resources/Public/Libs/dasrick-styleguide/style.css" media="all">
 
 }
