@@ -36,7 +36,8 @@ page {
   meta {
 #    X-UA-Compatible = IE=edge
 #    viewport = width=device-width, initial-scale=1
-#    google-site-verification = {$google.siteVerificationCode}
+    viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+    #    google-site-verification = {$google.siteVerificationCode}
   }
 
   10010 = TEXT
